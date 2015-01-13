@@ -31,12 +31,14 @@ public class GetContent {
 								//System.out.println(name + ": " + message);
 							} 
 							else {
-								parser.skipChildren();
+								//parser.skipChildren();
+								break;
 							}
 						}
 					}
 					else {
-						parser.skipChildren();
+						//parser.skipChildren();
+						break;
 					}        
 				}
 			}
@@ -52,6 +54,8 @@ public class GetContent {
 			System.err.println(e);
 			System.exit(-1);
 		}
+		//System.out.println(id);
+		//System.out.println(message);
 	}
 
 	public int getId(){
