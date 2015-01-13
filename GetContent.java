@@ -7,7 +7,7 @@ import com.fasterxml.jackson.core.*;
 public class GetContent {
 	private static int id;
 	private static String message;
-	public static void main (String args[]) {
+	public static int main (String args[]) {
 		try {
 			URL url = new URL("http://wepia.biz/wellness/wellness_api.php");
 			JsonFactory factory = new JsonFactory();
@@ -56,11 +56,14 @@ public class GetContent {
 		}
 		//System.out.println(id);
 		//System.out.println(message);
+		return id;
 	}
 
+	/*
 	public int getId(){
 		return id;
 	}
+	*/
 	
 	public String getMessage(){
 		return message;
