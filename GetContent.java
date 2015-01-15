@@ -5,9 +5,9 @@ import java.net.*;
 import com.fasterxml.jackson.core.*;
 
 public class GetContent {
-	private static int id;
-	private static String message;
-	public static int main (String args[]) {
+	private int id;
+	private String message;
+	public int GetId() {
 		try {
 			URL url = new URL("http://wepia.biz/wellness/wellness_api.php");
 			JsonFactory factory = new JsonFactory();
