@@ -1,18 +1,26 @@
 package jp.ac.keio.sfc.obpro;
 
-import java.util.Timer;
-
-
 public class MainTimer {
-
-	/**
-	 * @param args
-	 */
+	
 	public static void main(String[] args) {
 		// TODO 自動生成されたメソッド・スタブ
-		Timer timer = new Timer(1000, this);
-		timer.start();
-		timer.stop();
+		GetContent content = new GetContent();
+		int id;
+		int pre_id = 0;
+		for(;;){
+			try {
+				Thread.sleep(3000);
+				id = content.GetId();
+				
+				//System.out.println(id);
+				if(id != pre_id){
+					String message = content.getMessage();
+					System.out.println(message);
+				}
+				pre_id = id;
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
 	}
-
 }
